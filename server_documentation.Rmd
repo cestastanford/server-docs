@@ -1,0 +1,59 @@
+---
+title: "CESTA Server Documentation"
+css:
+- 'tufte.css'
+- 'custom.css'
+output:
+  html_document: default
+link-citations: False
+type: index
+smart: True
+abstract: This document outlines the work completed and planned for the Chinese Computing
+  Digital History Project led by Dr. Tom Mullaney, Stanford University, with initial
+  visualization work by Dr. Jason A. Heppler, Stanford University.
+---
+
+Navigation: [cesta.su.domains](#cesta.su.domains) | [Stanford AFS](#stanford-afs)
+
+# cesta.su.domains
+
+**Intent** The intention behind <http://cesta.su.domains> is to work around some of the limitations of AFS. By using the [Stanford Domains](http://domains.stanford.edu/) through a partnership with [Reclaim Hosting](https://reclaimhosting.com), CESTA can take advantage of one-click installs for Omeka, WordPress, and Drupal, as well as a variety of additional platforms that might be of use in digital humanities projects like MediaWiki and Scalar. 
+
+Because the Stanford AFS provides limited to non-existant support for some of these tools, Stanford Domains exists for CESTA to have more control over a development environment. Since Stanford Domains runs on Reclaim Hosting, users and developers have access to a [LAMP stack](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) necessary for most web development.
+
+**What's possible?** There may be a variety of reasons why a CESTA project may use Stanford Domains instead of Stanford AFS: 
+
+1. *Databases*. Stanford AFS provides support for [MySQL databases](https://uit.stanford.edu/service/sql), which is in practice a large, shared database used by many throughout the university. Stanford Domains allows you to set up an individual database for each project that might need one. And, through Domains, you have access to phpMyAdmin that allows one to easily switch between databases for administering them.
+
+2. *CMSs*. While Stanford AFS provides support for Drupal, Stanford Domains allows CESTA to use any number of CMSs supported by Reclaim Hosting, including Omeka, WordPress, Drupal, Scalar, Anchor CMS, Moodle, and many others. Each of the CMSs would have their own database. Many of these cannot be installed on Stanford AFS, except Drupal. Reclaim also automatically handles any security updates or patches that come through.
+
+3. *Access to the server*. Like Stanford AFS, Stanford Domains can be accessed through a File Manager through the Reclaim Hosting interface, via secure shell on the command line, or an FTP client like Transit or Cyberduck.
+
+4. *Support*. While Stanford AFS support routes through University IT, support for Stanford Domains comes from Andy Saltarelli in the Vice Provost for Teaching and Learning (VTPL) <saltarel@stanford.edu>, or through Reclaim Hosting's [own support](https://community.reclaimhosting.com). 
+
+More about what Reclaim Hosting offers can be read in [their documentation](https://community.reclaimhosting.com/c/docs).
+
+## Projects on Stanford Domains
+
+Currently, there are two key projects running on Stanford Domains.
+
+**Cecil Brown**: *Horton Historical* is hosted on cesta.su.domains using Omeka and the [Curatescape](http://curatescape.org) plugin at <http://cesta.su.domains/projects/hortonhistorical/>. Since Omeka will not run on Stanford AFS, we use Stanford Domains to install Omeka and the required plugins for Curatescape in order for the project to operate.
+
+For support on using Curatescape, you can contact their [support](http://curatescape.org/about/contact/) or send them an email <digitalhumanities@csuohio.edu>. You can also consult their [documentation](http://curatescape.org/docs/).
+
+**Molly Taylor-Poleskey**: *Journey Down the Rhine* is hosted on cesta.su.domains using Omeka and the
+[Neatline](http://neatline.org) plugin at <http://cesta.su.domains/projects/rhine/>. Since Stanford AFS will not run Omeka, we are using Stanford Domains to use Omeka to power the back-end and host the required plugins for Neatline.
+
+An additional level of complexity with this project is the hosting of shapefiles for displaying confessional boundaries. The shapefiles are hosted through a geoserver installed on [Open Shift](https://openshift.redhat.com/). Currently, the administration of the shapefiles is hosted at <http://rhinegeoserver-jheppler.rhcloud.com/geoserver/web/>. Styles for the boundaries are controlled by the `rhineboundaries` style under the Styles tab in the geoserver admin panel.
+
+# Stanford AFS
+
+The Andrew File System (AFS) is provided through Stanford IT and primarily houses the Spatial History Project. However, AFS comes with many limitations that make some projects unfeasible to support. Yet some projects may not require the kind of flexibility that Stanford Domains provides. For example, a project that can be hosted without needing it's own database may be located here. 
+
+Note also that projects hosted on AFS or Stanford Domains are eligible for their own proxy or redirect URLs. These URLs can be requested and administered through the [vanity URL service](https://uit.stanford.edu/service/vhost). Any support questions regarding Stanford AFS will have to be routed through HelpSU, or possibly by contacting John Bickar <jbickar@stanford.edu>.
+
+**Fred Frietas**: *Boundaries of Nature* is hosted in the Spatial History directory on AFS. The directory, `boundaries`, contains all of the files related to Frietas's project. The root of the project on the server is at:
+
+`/afs/ir.stanford.edu/group/spatialhistory/cgi-bin/boundaries/` 
+
+The project can be accessed at <http://boundariesofnature.stanford.edu>. The vanity URL redirects visitors to the full URL at <http://web.stanford.edu/group/spatialhistory/cgi-bin/boundaries/>. 

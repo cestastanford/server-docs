@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>CESTA Server Documentation</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="tufte.css" type="text/css" />
+  <link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">CESTA Server Documentation</h1>
+</div>
+<p>Navigation: <a href="#cesta.su.domains">cesta.su.domains</a> | <a href="#stanford-afs">Stanford AFS</a></p>
+<h1 id="cesta.su.domains">cesta.su.domains</h1>
+<p><strong>Intent</strong> The intention behind <a href="http://cesta.su.domains" class="uri">http://cesta.su.domains</a> is to work around some of the limitations of AFS. By using the <a href="http://domains.stanford.edu/">Stanford Domains</a> through a partnership with <a href="https://reclaimhosting.com">Reclaim Hosting</a>, CESTA can take advantage of one-click installs for Omeka, WordPress, and Drupal, as well as a variety of additional platforms that might be of use in digital humanities projects like MediaWiki and Scalar.</p>
+<p>Because the Stanford AFS provides limited to non-existant support for some of these tools, Stanford Domains exists for CESTA to have more control over a development environment. Since Stanford Domains runs on Reclaim Hosting, users and developers have access to a <a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP stack</a> necessary for most web development.</p>
+<p><strong>What’s possible?</strong> There may be a variety of reasons why a CESTA project may use Stanford Domains instead of Stanford AFS:</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Databases</em>. Stanford AFS provides support for <a href="https://uit.stanford.edu/service/sql">MySQL databases</a>, which is in practice a large, shared database used by many throughout the university. Stanford Domains allows you to set up an individual database for each project that might need one. And, through Domains, you have access to phpMyAdmin that allows one to easily switch between databases for administering them.</p></li>
+<li><p><em>CMSs</em>. While Stanford AFS provides support for Drupal, Stanford Domains allows CESTA to use any number of CMSs supported by Reclaim Hosting, including Omeka, WordPress, Drupal, Scalar, Anchor CMS, Moodle, and many others. Each of the CMSs would have their own database. Many of these cannot be installed on Stanford AFS, except Drupal. Reclaim also automatically handles any security updates or patches that come through.</p></li>
+<li><p><em>Access to the server</em>. Like Stanford AFS, Stanford Domains can be accessed through a File Manager through the Reclaim Hosting interface, via secure shell on the command line, or an FTP client like Transit or Cyberduck.</p></li>
+<li><p><em>Support</em>. While Stanford AFS support routes through University IT, support for Stanford Domains comes from Andy Saltarelli in the Vice Provost for Teaching and Learning (VTPL) <script type="text/javascript">
+<!--
+h='&#x73;&#116;&#x61;&#110;&#102;&#x6f;&#114;&#100;&#46;&#x65;&#100;&#x75;';a='&#64;';n='&#x73;&#x61;&#108;&#116;&#x61;&#114;&#x65;&#108;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x73;&#x61;&#108;&#116;&#x61;&#114;&#x65;&#108;&#32;&#x61;&#116;&#32;&#x73;&#116;&#x61;&#110;&#102;&#x6f;&#114;&#100;&#32;&#100;&#x6f;&#116;&#32;&#x65;&#100;&#x75;</noscript>, or through Reclaim Hosting’s <a href="https://community.reclaimhosting.com">own support</a>.</p></li>
+</ol>
+<p>More about what Reclaim Hosting offers can be read in <a href="https://community.reclaimhosting.com/c/docs">their documentation</a>.</p>
+<h2 id="projects-on-stanford-domains">Projects on Stanford Domains</h2>
+<p>Currently, there are two key projects running on Stanford Domains.</p>
+<p><strong>Cecil Brown</strong>: <em>Horton Historical</em> is hosted on cesta.su.domains using Omeka and the <a href="http://curatescape.org">Curatescape</a> plugin at <a href="http://cesta.su.domains/projects/hortonhistorical/" class="uri">http://cesta.su.domains/projects/hortonhistorical/</a>. Since Omeka will not run on Stanford AFS, we use Stanford Domains to install Omeka and the required plugins for Curatescape in order for the project to operate.</p>
+<p>For support on using Curatescape, you can contact their <a href="http://curatescape.org/about/contact/">support</a> or send them an email <script type="text/javascript">
+<!--
+h='&#x63;&#x73;&#x75;&#x6f;&#104;&#x69;&#x6f;&#46;&#x65;&#100;&#x75;';a='&#64;';n='&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#104;&#x75;&#x6d;&#x61;&#110;&#x69;&#116;&#x69;&#x65;&#x73;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#104;&#x75;&#x6d;&#x61;&#110;&#x69;&#116;&#x69;&#x65;&#x73;&#32;&#x61;&#116;&#32;&#x63;&#x73;&#x75;&#x6f;&#104;&#x69;&#x6f;&#32;&#100;&#x6f;&#116;&#32;&#x65;&#100;&#x75;</noscript>. You can also consult their <a href="http://curatescape.org/docs/">documentation</a>.</p>
+<p><strong>Molly Taylor-Poleskey</strong>: <em>Journey Down the Rhine</em> is hosted on cesta.su.domains using Omeka and the <a href="http://neatline.org">Neatline</a> plugin at <a href="http://cesta.su.domains/projects/rhine/" class="uri">http://cesta.su.domains/projects/rhine/</a>. Since Stanford AFS will not run Omeka, we are using Stanford Domains to use Omeka to power the back-end and host the required plugins for Neatline.</p>
+<p>An additional level of complexity with this project is the hosting of shapefiles for displaying confessional boundaries. The shapefiles are hosted through a geoserver installed on <a href="https://openshift.redhat.com/">Open Shift</a>. Currently, the administration of the shapefiles is hosted at <a href="http://rhinegeoserver-jheppler.rhcloud.com/geoserver/web/" class="uri">http://rhinegeoserver-jheppler.rhcloud.com/geoserver/web/</a>. Styles for the boundaries are controlled by the <code>rhineboundaries</code> style under the Styles tab in the geoserver admin panel.</p>
+<h1 id="stanford-afs">Stanford AFS</h1>
+<p>The Andrew File System (AFS) is provided through Stanford IT and primarily houses the Spatial History Project. However, AFS comes with many limitations that make some projects unfeasible to support. Yet some projects may not require the kind of flexibility that Stanford Domains provides. For example, a project that can be hosted without needing it’s own database may be located here.</p>
+<p>Note also that projects hosted on AFS or Stanford Domains are eligible for their own proxy or redirect URLs. These URLs can be requested and administered through the <a href="https://uit.stanford.edu/service/vhost">vanity URL service</a>. Any support questions regarding Stanford AFS will have to be routed through HelpSU, or possibly by contacting John Bickar <script type="text/javascript">
+<!--
+h='&#x73;&#116;&#x61;&#110;&#102;&#x6f;&#114;&#100;&#46;&#x65;&#100;&#x75;';a='&#64;';n='&#106;&#98;&#x69;&#x63;&#x6b;&#x61;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#106;&#98;&#x69;&#x63;&#x6b;&#x61;&#114;&#32;&#x61;&#116;&#32;&#x73;&#116;&#x61;&#110;&#102;&#x6f;&#114;&#100;&#32;&#100;&#x6f;&#116;&#32;&#x65;&#100;&#x75;</noscript>.</p>
+<p><strong>Fred Frietas</strong>: <em>Boundaries of Nature</em> is hosted in the Spatial History directory on AFS. The directory, <code>boundaries</code>, contains all of the files related to Frietas’s project. The root of the project on the server is at:</p>
+<p><code>/afs/ir.stanford.edu/group/spatialhistory/cgi-bin/boundaries/</code></p>
+<p>The project can be accessed at <a href="http://boundariesofnature.stanford.edu" class="uri">http://boundariesofnature.stanford.edu</a>. The vanity URL redirects visitors to the full URL at <a href="http://web.stanford.edu/group/spatialhistory/cgi-bin/boundaries/" class="uri">http://web.stanford.edu/group/spatialhistory/cgi-bin/boundaries/</a>.</p>
+<div id="refs" class="references">
+
+</div>
+</body>
+</html>
